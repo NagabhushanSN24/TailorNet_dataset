@@ -8,9 +8,9 @@ read -p "Password (SMPL-X):" password
 username=$(urle $username)
 password=$(urle $password)
 
-mkdir -p ./body_models
-wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=smpl&sfile=SMPL_python_v.1.1.0.zip' -O './body_models/smpl.zip' --no-check-certificate --continue
-unzip ./body_models/smpl.zip -d ./body_models/smpl1
-mv ./body_models/smpl1/SMPL_python_v.1.1.0/smpl ./body_models/smpl
-rmdir ./body_models/smpl1/SMPL_python_v.1.1.0
-rmdir ./body_models/smpl1
+mkdir -p ../data/smpl
+wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=smpl&sfile=SMPL_python_v.1.1.0.zip' -O 'data/smpl.zip' --no-check-certificate --continue
+unzip ../data/smpl.zip -d ../data/smpl1
+mv ../data/smpl1/SMPL_python_v.1.1.0/smpl ../data/smpl
+rmdir ../data/smpl1/SMPL_python_v.1.1.0
+rmdir ../data/smpl1
