@@ -22,6 +22,11 @@ cython
 2. Unzip `SMPL_python_v.1.0.0.zip` and put `smpl/models/*.pkl` in `ROOT/smpl`(specify `ROOT` in `global_var.py`)   
 3. Run `smpl_lib/convert_smpl_models.py`  
 
+If you get an error saying `numpy` has no attribute `bool`, install a previous version of `numpy`
+```shell
+pip3 install mxnet-mkl==1.6.0 numpy==1.23.1
+```
+
 ## Data preparation
 All data is available in the following links:  
 [Data](https://nextcloud.mpi-klsb.mpg.de/index.php/s/W7a57iXRG9Yms6P) or  
